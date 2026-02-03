@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    background-image: radial-gradient(#4f46e5 0.5px, #f0f2f5 0.5px);
+    background-size: 20px 20px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+h1 {
+    color: #1e293b;
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #4f46e5;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+    font-size: 0.95rem;
+}
+
+.btn:active { transform: scale(0.96); }
+
+/* Colors matched to your image */
+.login-btn { background: #10b981; }
+.logout-btn { background: #ef4444; }
+.purchase-btn { background: #f59e0b; }
+.profile-btn { background: #6366f1; }
+.summary-btn { 
+    background: #334155; 
+    grid-column: span 2; 
+    margin-top: 5px;
+}
+
+.console-box {
+    background: #111827;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.console-header {
+    background: #1f2937;
+    color: #94a3b8;
+    padding: 10px 15px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+pre {
+    margin: 0;
+    padding: 15px;
+    color: #38bdf8; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    min-height: 100px;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
