@@ -1,13 +1,11 @@
 let tasks = [];
 
-// Load from server on startup
 async function loadFromServer() {
     const response = await fetch('/tasks');
     tasks = await response.json();
     renderLists();
 }
 
-// Add Task Function
 async function addTask() {
     const title = document.getElementById('taskInput').value;
     const deadline = document.getElementById('dateInput').value;
@@ -36,7 +34,6 @@ async function addTask() {
     }
 }
 
-// Toggle Task Status
 async function toggleStatus(id) {
     const task = tasks.find(t => t.id === id);
     const newStatus = task.status === 'completed' ? 'pending' : 'completed';
@@ -50,7 +47,6 @@ async function toggleStatus(id) {
     loadFromServer();
 }
 
-// Delete Task
 async function deleteTask(id) {
     await fetch(`/tasks/${id}`, {
         method: 'DELETE'
