@@ -19,3 +19,5 @@ SHOW TABLES;
 
 SELECT * FROM users;
 SELECT * FROM activity_log;
+
+drop table activity_log;
